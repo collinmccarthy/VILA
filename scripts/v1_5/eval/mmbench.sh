@@ -8,7 +8,7 @@ if [ "$#" -ge 3 ]; then
     CONV_MODE="$3"
 fi
 
-python -m llava.eval.model_vqa_mmbench \
+python -m vila.eval.model_vqa_mmbench \
     --model-path $MODEL_PATH \
     --question-file ./playground/data/eval/mmbench/$SPLIT.tsv \
     --answers-file runs/eval/$CKPT/mmbench/$SPLIT.jsonl \

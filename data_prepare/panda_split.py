@@ -50,22 +50,22 @@ from pytorchvideo.data.video import Video
 from torch.utils.data import ConcatDataset, Dataset
 from torchvision.transforms import Resize
 
-import llava.data.datasets_mixture as datasets_mixture
+import vila.data.datasets_mixture as datasets_mixture
 from llava import conversation as conversation_lib
-from llava.constants import (
+from vila.constants import (
     DEFAULT_IM_END_TOKEN,
     DEFAULT_IM_START_TOKEN,
     DEFAULT_IMAGE_TOKEN,
     IGNORE_INDEX,
     IMAGE_TOKEN_INDEX,
 )
-from llava.data.dataset import LazySupervisedDataset
-from llava.data.dataset_impl.textocr import GenericDataset, preprocess_OCR
-from llava.data.datasets_mixture import DATASETS
-from llava.data.simple_vila_webdataset import VILAWebDataset
-from llava.data.utils import VILAEncodedVideo
-from llava.mm_utils import is_gemma_tokenizer, tokenizer_image_token
-from llava.train.args import DataArguments, TrainingArguments
+from vila.data.dataset import LazySupervisedDataset
+from vila.data.dataset_impl.textocr import GenericDataset, preprocess_OCR
+from vila.data.datasets_mixture import DATASETS
+from vila.data.simple_vila_webdataset import VILAWebDataset
+from vila.data.utils import VILAEncodedVideo
+from vila.mm_utils import is_gemma_tokenizer, tokenizer_image_token
+from vila.train.args import DataArguments, TrainingArguments
 
 DEFAULT_HIERTEXT = "/lustre/fsw/portfolios/nvr/projects/nvr_elm_llm/dataset/panda70m"
 SPLIT = "panda70m_testing"

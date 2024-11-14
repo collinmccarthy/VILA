@@ -8,7 +8,7 @@ fi
 
 SPLIT="mmbench_dev_cn_20231003"
 
-python -m llava.eval.model_vqa_mmbench \
+python -m vila.eval.model_vqa_mmbench \
     --model-path $MODEL_PATH \
     --question-file ./playground/data/eval/mmbench_cn/$SPLIT.tsv \
     --answers-file runs/eval/$CKPT/mmbench_cn/$SPLIT.jsonl \

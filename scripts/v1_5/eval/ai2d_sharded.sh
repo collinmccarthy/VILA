@@ -16,7 +16,7 @@ for IDX in $(seq 0 $((CHUNKS-1))); do
     GPU_IDX1=$((IDX * 2))  # First GPU index
     GPU_IDX2=$((GPU_IDX1 + 1))  # Second GPU index
 
-    CUDA_VISIBLE_DEVICES=${GPULIST[$GPU_IDX1]},${GPULIST[$GPU_IDX2]} python -m llava.eval.evaluate_vqa \
+    CUDA_VISIBLE_DEVICES=${GPULIST[$GPU_IDX1]},${GPULIST[$GPU_IDX2]} python -m vila.eval.evaluate_vqa \
         --model-path $MODEL_PATH \
         --generation-config '{"max_new_tokens": 10}' \
         --dataset ai2diagram_test \
@@ -40,4 +40,4 @@ for IDX in $(seq 0 $((CHUNKS-1))); do
     cat runs/eval/$CKPT/ai2d/$SPLIT/answers/${CHUNKS}_${IDX}.jsonl >> "$output_file"
 done
 
-python -m llava.eval.evaluate_vqa_score --answers-file $output_file --metric accuracy
+python -m vila.eval.evaluate_vqa_score --answers-file $output_file --metric accuracy

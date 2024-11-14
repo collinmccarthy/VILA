@@ -25,7 +25,7 @@ for IDX in $(seq 0 $((CHUNKS-1))); do
   GPU_IDX1=$((IDX * 2))  # First GPU index
   GPU_IDX2=$((GPU_IDX1 + 1))  # Second GPU index
 
-  CUDA_VISIBLE_DEVICES=${GPULIST[$GPU_IDX1]},${GPULIST[$GPU_IDX2]} python -m llava.eval.model_vqa_mmmu \
+  CUDA_VISIBLE_DEVICES=${GPULIST[$GPU_IDX1]},${GPULIST[$GPU_IDX2]} python -m vila.eval.model_vqa_mmmu \
     --model_path $MODEL_PATH \
     --data_path ./playground/data/eval/MMMU \
     --conv-mode $CONV_MODE \

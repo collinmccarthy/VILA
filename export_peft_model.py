@@ -22,7 +22,7 @@ import torch
 import transformers
 from peft import PeftModel
 
-from llava.model import *
+from vila.model import *
 
 model_name_or_path = "lmsys/vicuna-7b-v1.5"
 peft_dir = sys.argv[1]

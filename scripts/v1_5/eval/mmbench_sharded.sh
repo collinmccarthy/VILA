@@ -19,7 +19,7 @@ fi
 for IDX in $(seq 0 $((CHUNKS-1))); do
     GPU_IDX1=$((IDX * 2))  # First GPU index
     GPU_IDX2=$((GPU_IDX1 + 1))  # Second GPU index
-    CUDA_VISIBLE_DEVICES=${GPULIST[$GPU_IDX1]},${GPULIST[$GPU_IDX2]} python -m llava.eval.model_vqa_mmbench \
+    CUDA_VISIBLE_DEVICES=${GPULIST[$GPU_IDX1]},${GPULIST[$GPU_IDX2]} python -m vila.eval.model_vqa_mmbench \
         --model-path $MODEL_PATH \
         --question-file ./playground/data/eval/mmbench/$SPLIT.tsv \
         --answers-file runs/eval/$CKPT/mmbench/${CHUNKS}_${IDX}.jsonl \

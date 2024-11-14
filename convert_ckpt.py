@@ -31,14 +31,14 @@ from transformers import (
     PreTrainedModel,
 )
 
-import llava.model.language_model.llava_llama
-from llava.model import *
-from llava.model.configuration_llava import LlavaConfig
-from llava.model.language_model.builder import build_llm_and_tokenizer
-from llava.model.multimodal_encoder.builder import SiglipVisionTower, build_vision_tower
-from llava.model.multimodal_encoder.siglip import SiglipImageProcessor, SiglipVisionConfig, SiglipVisionModel
-from llava.model.multimodal_projector.builder import build_mm_projector
-from llava.model.utils import get_model_config
+import vila.model.language_model.llava_llama
+from vila.model import *
+from vila.model.configuration_llava import LlavaConfig
+from vila.model.language_model.builder import build_llm_and_tokenizer
+from vila.model.multimodal_encoder.builder import SiglipVisionTower, build_vision_tower
+from vila.model.multimodal_encoder.siglip import SiglipImageProcessor, SiglipVisionConfig, SiglipVisionModel
+from vila.model.multimodal_projector.builder import build_mm_projector
+from vila.model.utils import get_model_config
 
 
 def main(

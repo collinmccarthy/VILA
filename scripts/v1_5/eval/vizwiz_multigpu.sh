@@ -14,7 +14,7 @@ if [ "$#" -ge 2 ]; then
 fi
 
 for IDX in $(seq 0 $((CHUNKS-1))); do
-    CUDA_VISIBLE_DEVICES=${GPULIST[$IDX]} python -m llava.eval.model_vqa_loader \
+    CUDA_VISIBLE_DEVICES=${GPULIST[$IDX]} python -m vila.eval.model_vqa_loader \
         --model-path $MODEL_PATH \
         --generation-config '{"max_new_tokens": 128}' \
         --question-file ./playground/data/eval/vizwiz/llava_test.jsonl \

@@ -10,7 +10,7 @@
 
 
 # for IDX in $(seq 0 $((CHUNKS-1))); do
-#     CUDA_VISIBLE_DEVICES=${GPULIST[$IDX]} python -m llava.eval.model_vqa_science \
+#     CUDA_VISIBLE_DEVICES=${GPULIST[$IDX]} python -m vila.eval.model_vqa_science \
 #         --model-path $MODEL_PATH \
 #         --question-file ./playground/data/eval/scienceqa/llava_test_CQM-A.json \
 #         --image-folder ./playground/data/eval/scienceqa/images/test \
@@ -56,7 +56,7 @@ for IDX in $(seq 0 $((CHUNKS-1))); do
     GPU_IDX1=$((IDX * 2))  # First GPU index
     GPU_IDX2=$((GPU_IDX1 + 1))  # Second GPU index
 
-    CUDA_VISIBLE_DEVICES=${GPULIST[$GPU_IDX1]},${GPULIST[$GPU_IDX2]} python -m llava.eval.model_vqa_science \
+    CUDA_VISIBLE_DEVICES=${GPULIST[$GPU_IDX1]},${GPULIST[$GPU_IDX2]} python -m vila.eval.model_vqa_science \
         --model-path $MODEL_PATH \
         --question-file ./playground/data/eval/scienceqa/llava_test_CQM-A.json \
         --image-folder ./playground/data/eval/scienceqa/images/test \

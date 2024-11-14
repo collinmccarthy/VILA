@@ -16,7 +16,7 @@ torchrun --nproc-per-node=8 \
     --data-path ./playground/data/eval/chartqa/test_human.jsonl \
     --answers-file runs/eval/$CKPT/chartqa/answers1/merge.jsonl
 
-python -m llava.eval.evaluate_vqa_score --answers-file runs/eval/$CKPT/chartqa/answers1/merge.jsonl --metric relaxed_accuracy
+python -m vila.eval.evaluate_vqa_score --answers-file runs/eval/$CKPT/chartqa/answers1/merge.jsonl --metric relaxed_accuracy
 
 torchrun --nproc-per-node=8 \
     llava/eval/evaluate_vqa.py \
@@ -28,4 +28,4 @@ torchrun --nproc-per-node=8 \
     --image-folder ./playground/data/eval/chartqa \
     --answers-file runs/eval/$CKPT/chartqa/answers2/merge.jsonl
 
-python -m llava.eval.evaluate_vqa_score --answers-file runs/eval/$CKPT/chartqa/answers2/merge.jsonl --metric relaxed_accuracy
+python -m vila.eval.evaluate_vqa_score --answers-file runs/eval/$CKPT/chartqa/answers2/merge.jsonl --metric relaxed_accuracy

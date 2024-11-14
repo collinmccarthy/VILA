@@ -8,7 +8,7 @@ fi
 
 echo "$MODEL_PATH $CKPT"
 
-CUDA_VISIBLE_DEVICES=0 python -m llava.eval.model_vqa \
+CUDA_VISIBLE_DEVICES=0 python -m vila.eval.model_vqa \
     --model-path $MODEL_PATH \
     --question-file ./playground/data/eval/llava-bench-in-the-wild/questions.jsonl \
     --image-folder ./playground/data/eval/llava-bench-in-the-wild/images \

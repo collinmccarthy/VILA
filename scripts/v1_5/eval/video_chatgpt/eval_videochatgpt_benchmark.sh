@@ -13,7 +13,7 @@ pred_path="${RESULT_DIR}/generic_qa/merge.jsonl"
 output_dir="${RESULT_DIR}/${task}/${model}"
 output_json="${RESULT_DIR}/${task}/${model}.json"
 
-python -m llava.eval.video.eval_benchmark_1_correctness \
+python -m vila.eval.video.eval_benchmark_1_correctness \
     --pred_path ${pred_path} \
     --output_dir ${output_dir} \
     --output_json ${output_json} \
@@ -28,7 +28,7 @@ pred_path="${RESULT_DIR}/generic_qa/merge.jsonl"
 output_dir="${RESULT_DIR}/${task}/${model}"
 output_json="${RESULT_DIR}/${task}/${model}.json"
 
-python -m llava.eval.video.eval_benchmark_2_detailed_orientation \
+python -m vila.eval.video.eval_benchmark_2_detailed_orientation \
     --pred_path ${pred_path} \
     --output_dir ${output_dir} \
     --output_json ${output_json} \
@@ -43,7 +43,7 @@ pred_path="${RESULT_DIR}/generic_qa/merge.jsonl"
 output_dir="${RESULT_DIR}/${task}/${model}"
 output_json="${RESULT_DIR}/${task}/${model}.json"
 
-python -m llava.eval.video.eval_benchmark_3_context \
+python -m vila.eval.video.eval_benchmark_3_context \
     --pred_path ${pred_path} \
     --output_dir ${output_dir} \
     --output_json ${output_json} \
@@ -58,7 +58,7 @@ pred_path="${RESULT_DIR}/temporal_qa/merge.jsonl"
 output_dir="${RESULT_DIR}/${task}/${model}"
 output_json="${RESULT_DIR}/${task}/${model}.json"
 
-python -m llava.eval.video.eval_benchmark_4_temporal \
+python -m vila.eval.video.eval_benchmark_4_temporal \
     --pred_path ${pred_path} \
     --output_dir ${output_dir} \
     --output_json ${output_json} \
@@ -73,7 +73,7 @@ pred_path="${RESULT_DIR}/consistency_qa/merge.jsonl"
 output_dir="${RESULT_DIR}/${task}/${model}"
 output_json="${RESULT_DIR}/${task}/${model}.json"
 
-python -m llava.eval.video.eval_benchmark_5_consistency \
+python -m vila.eval.video.eval_benchmark_5_consistency \
     --pred_path ${pred_path} \
     --output_dir ${output_dir} \
     --output_json ${output_json} \

@@ -17,7 +17,7 @@ for IDX in $(seq 0 $((CHUNKS-1))); do
     GPU_IDX1=$((IDX * 2))  # First GPU index
     GPU_IDX2=$((GPU_IDX1 + 1))  # Second GPU index
 
-    CUDA_VISIBLE_DEVICES=${GPULIST[$GPU_IDX1]},${GPULIST[$GPU_IDX2]} python -m llava.eval.model_vqa_loader \
+    CUDA_VISIBLE_DEVICES=${GPULIST[$GPU_IDX1]},${GPULIST[$GPU_IDX2]} python -m vila.eval.model_vqa_loader \
     --model-path $MODEL_PATH \
     --generation-config '{"max_new_tokens": 128}' \
     --question-file ./playground/data/eval/textvqa/llava_textvqa_val_v051_ocr.jsonl \
@@ -41,6 +41,6 @@ for IDX in $(seq 0 $((CHUNKS-1))); do
 done
 
 
-python -m llava.eval.eval_textvqa \
+python -m vila.eval.eval_textvqa \
     --annotation-file ./playground/data/eval/textvqa/TextVQA_0.5.1_val.json \
     --result-file $output_file

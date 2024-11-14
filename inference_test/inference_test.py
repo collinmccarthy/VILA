@@ -28,16 +28,15 @@ import os
 import torch
 from PIL import Image
 
-from llava.constants import IMAGE_TOKEN_INDEX
-from llava.conversation import SeparatorStyle, conv_templates
-from llava.mm_utils import (KeywordsStoppingCriteria, process_images,
-                            tokenizer_image_token)
-from llava.model import *
+from vila.constants import IMAGE_TOKEN_INDEX
+from vila.conversation import SeparatorStyle, conv_templates
+from vila.mm_utils import KeywordsStoppingCriteria, process_images, tokenizer_image_token
+from vila.model import *
 
 DEFAULT_IMAGE_PATCH_TOKEN = "<im_patch>"
 
 
-from llava.model.builder import load_pretrained_model
+from vila.model.builder import load_pretrained_model
 
 
 def eval_model(args, model, tokenizer, image_processor):

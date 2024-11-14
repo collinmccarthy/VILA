@@ -27,11 +27,11 @@ from cog import BasePredictor, ConcatenateIterator, Input, Path
 from PIL import Image
 from transformers.generation.streamers import TextIteratorStreamer
 
-from llava.constants import DEFAULT_IMAGE_TOKEN, IMAGE_TOKEN_INDEX
-from llava.conversation import SeparatorStyle, conv_templates
-from llava.mm_utils import KeywordsStoppingCriteria, tokenizer_image_token
-from llava.model.builder import load_pretrained_model
-from llava.utils import disable_torch_init
+from vila.constants import DEFAULT_IMAGE_TOKEN, IMAGE_TOKEN_INDEX
+from vila.conversation import SeparatorStyle, conv_templates
+from vila.mm_utils import KeywordsStoppingCriteria, tokenizer_image_token
+from vila.model.builder import load_pretrained_model
+from vila.utils import disable_torch_init
 
 os.environ["HUGGINGFACE_HUB_CACHE"] = os.getcwd() + "/weights"
 

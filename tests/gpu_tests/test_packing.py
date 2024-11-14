@@ -2,9 +2,9 @@ import copy
 import os
 import transformers
 from transformers import AutoTokenizer, CLIPImageProcessor
-from llava.model.builder import load_pretrained_model
-from llava.model import LlavaLlamaForCausalLM, LlavaConfig
-from llava.train.args import ModelArguments
+from vila.model.builder import load_pretrained_model
+from vila.model import LlavaLlamaForCausalLM, LlavaConfig
+from vila.train.args import ModelArguments
 import torch
 import unittest
 
@@ -29,7 +29,7 @@ class TestInputPacking(unittest.TestCase):
             version="v1",
             vision_tower="openai/clip-vit-large-patch14-336",
             mm_vision_select_layer=-2,
-            mm_use_im_patch_token=False
+            mm_use_im_patch_token=False,
         )
         self.config = LlavaConfig.from_pretrained(model_name_or_path)
         print("Initializing tokenizer...")
@@ -121,5 +121,6 @@ class TestInputPacking(unittest.TestCase):
             print("loss =", loss, "loss_ref =", loss_ref)
             self.assertAlmostEqual(loss.item(), loss_ref.item(), places=2)
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     unittest.main()

@@ -26,7 +26,7 @@ export WANDB_API_KEY='' # if you want to visualize predictions (and set [--use-w
 for IDX in 0 1 2 3 4 5 6 7; do
     CIDX=$((RANK*8+IDX))
     echo "global idx: $CIDX rank: $RANK chunks: ${CHUNKS} local idx: ${IDX}"
-    CUDA_VISIBLE_DEVICES=$IDX python -m llava.eval.model_refcoco \
+    CUDA_VISIBLE_DEVICES=$IDX python -m vila.eval.model_refcoco \
         --model-path $MODEL_PATH \
         --data-path ${ann_path} \
         --image-folder ${image_path} \
@@ -78,6 +78,6 @@ for data_split in val test; do
     done
 done
 
-python -m llava.eval.eval_refcoco \
+python -m vila.eval.eval_refcoco \
     --pred_path ${YOUR_ANSWER_PATH} \
     --data_path ${ann_path}

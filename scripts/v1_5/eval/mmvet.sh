@@ -6,7 +6,7 @@ if [ "$#" -ge 3 ]; then
     CONV_MODE="$3"
 fi
 
-CUDA_VISIBLE_DEVICES=0 python -m llava.eval.model_vqa \
+CUDA_VISIBLE_DEVICES=0 python -m vila.eval.model_vqa \
     --model-path $MODEL_PATH \
     --question-file ./playground/data/eval/mm-vet/llava-mm-vet.jsonl \
     --image-folder ./playground/data/eval/mm-vet/images \

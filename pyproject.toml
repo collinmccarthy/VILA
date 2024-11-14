@@ -28,7 +28,7 @@ dependencies = [
 ]
 
 [project.scripts]
-vilarun = "llava.cli.run:main"
+vilarun = "vila.cli.run:main"
 
 [project.optional-dependencies]
 train = ["deepspeed==0.9.5", "ninja", "wandb"]

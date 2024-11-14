@@ -14,7 +14,7 @@ fi
 
 
 for IDX in $(seq 0 $((CHUNKS-1))); do
-    CUDA_VISIBLE_DEVICES=${GPULIST[$IDX]} python -m llava.eval.evaluate_vqa \
+    CUDA_VISIBLE_DEVICES=${GPULIST[$IDX]} python -m vila.eval.evaluate_vqa \
         --model-path $MODEL_PATH \
         --generation-config '{"max_new_tokens": 100}' \
         --dataset docvqa_test \
