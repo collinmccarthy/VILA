@@ -10,8 +10,8 @@ import torch
 from datasets import concatenate_datasets, load_dataset
 from tqdm import tqdm
 
-import llava
-from llava import conversation as conversation_lib
+import vila
+from vila import conversation as conversation_lib
 from vila.eval.mmmu_utils.data_utils import CAT_SHORT2LONG, construct_prompt, process_single_sample
 from vila.eval.mmmu_utils.eval_utils import parse_choice
 from vila.utils import distributed as dist

@@ -9,7 +9,7 @@ import signal
 import torch
 from tqdm import tqdm
 
-from llava import conversation as conversation_lib
+from vila import conversation as conversation_lib
 from vila.constants import (
     DEFAULT_IM_END_TOKEN,
     DEFAULT_IM_START_TOKEN,

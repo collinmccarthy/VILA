@@ -8,8 +8,8 @@ import torch
 from datasets import load_dataset
 from tqdm import tqdm
 
-import llava
-from llava import conversation as conversation_lib
+import vila
+from vila import conversation as conversation_lib
 from vila.eval.mmmu_utils.eval_utils import parse_choice
 from vila.utils import distributed as dist
 from vila.utils import io

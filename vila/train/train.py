@@ -29,7 +29,7 @@ from transformers.modeling_utils import unwrap_model
 
 import vila.data.dataset as dataset
 import vila.data.datasets_mixture as datasets_mixture
-from llava import conversation as conversation_lib
+from vila import conversation as conversation_lib
 from vila.constants import (
     DEFAULT_IM_END_TOKEN,
     DEFAULT_IM_START_TOKEN,

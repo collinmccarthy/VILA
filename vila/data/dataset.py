@@ -37,7 +37,7 @@ from torch.utils.data import ConcatDataset, Dataset, default_collate
 from transformers import PreTrainedTokenizer
 
 import vila.data.datasets_mixture as datasets_mixture
-from llava import conversation as conversation_lib
+from vila import conversation as conversation_lib
 from vila.constants import (
     DEFAULT_IM_END_TOKEN,
     DEFAULT_IM_START_TOKEN,

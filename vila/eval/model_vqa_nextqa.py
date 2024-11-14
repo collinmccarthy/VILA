@@ -14,7 +14,7 @@ from pytorchvideo.data.encoded_video import EncodedVideo
 from torchvision.transforms import Resize
 from tqdm import tqdm
 
-from llava import conversation as conversation_lib
+from vila import conversation as conversation_lib
 from vila.constants import DEFAULT_IM_END_TOKEN, DEFAULT_IM_START_TOKEN, DEFAULT_IMAGE_TOKEN, IMAGE_TOKEN_INDEX
 from vila.conversation import SeparatorStyle, conv_templates
 from vila.data.dataset import LazySupervisedDataset

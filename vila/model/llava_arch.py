@@ -26,7 +26,7 @@ from PIL import Image
 from transformers import AutoConfig, GenerationConfig, PreTrainedModel
 from transformers.modeling_utils import ContextManagers, no_init_weights
 
-from llava import modals
+from vila import modals
 from vila.constants import (
     DEFAULT_IM_END_TOKEN,
     DEFAULT_IM_START_TOKEN,

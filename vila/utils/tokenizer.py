@@ -20,7 +20,7 @@ from typing import Any, Dict, List, Optional, Sequence
 import torch
 import transformers
 
-from llava import conversation as conversation_lib
+from vila import conversation as conversation_lib
 from vila.constants import IGNORE_INDEX
 from vila.mm_utils import tokenizer_image_token
 

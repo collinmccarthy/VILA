@@ -7,8 +7,8 @@ import torch
 from PIL import Image
 from tqdm import tqdm
 
-import llava
-from llava import conversation as conversation_lib
+import vila
+from vila import conversation as conversation_lib
 from vila.utils import distributed as dist
 from vila.utils import io
 

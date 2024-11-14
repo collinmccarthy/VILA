@@ -6,8 +6,8 @@ import torch
 from datasets import load_dataset
 from tqdm import tqdm
 
-import llava
-from llava import conversation as conversation_lib
+import vila
+from vila import conversation as conversation_lib
 from vila.eval.mathvista_utils.extract_answer import extract_answer
 from vila.utils import distributed as dist
 from vila.utils import io
